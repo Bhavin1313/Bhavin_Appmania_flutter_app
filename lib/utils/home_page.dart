@@ -15,6 +15,8 @@ class _HomePageState extends State<HomePage> {
   String? select;
   @override
   Widget build(BuildContext context) {
+    double h = MediaQuery.of(context).size.height;
+    double w = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Color(0xffffffff),
       appBar: AppBar(
@@ -34,74 +36,78 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: 20,
-                        ),
-                        CircleAvatar(
-                          radius: 20,
-                          child: Image.network(
-                              "https://howtodrawforkids.com/wp-content/uploads/2022/07/how-to-draw-the-sun.jpg"),
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(left: 20),
-                              height: 25,
-                              width: 150,
-                              alignment: Alignment.topLeft,
-                              child: Text(
-                                "Good Morning 👋",
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 14,
+                    Container(
+                      height: 50,
+                      width: w * .900,
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 20,
+                          ),
+                          CircleAvatar(
+                            radius: 20,
+                            child: Image.network(
+                                "https://howtodrawforkids.com/wp-content/uploads/2022/07/how-to-draw-the-sun.jpg"),
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(left: 20),
+                                height: 25,
+                                width: w * 0.400,
+                                alignment: Alignment.topLeft,
+                                child: Text(
+                                  "Good Morning 👋",
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 14,
+                                  ),
                                 ),
                               ),
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(left: 20),
-                              height: 25,
-                              width: 150,
-                              alignment: Alignment.topLeft,
-                              child: Text(
-                                "Bhavin Bhalala",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold),
+                              Container(
+                                margin: EdgeInsets.only(left: 20),
+                                height: 25,
+                                width: w * 0.400,
+                                alignment: Alignment.topLeft,
+                                child: Text(
+                                  "Bhavin Bhalala",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
                               ),
+                            ],
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(left: 20),
+                            height: 25,
+                            width: 30,
+                            alignment: Alignment.topLeft,
+                            child: Text(
+                              "🔔",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
                             ),
-                          ],
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(left: 20),
-                          height: 25,
-                          width: 30,
-                          alignment: Alignment.topLeft,
-                          child: Text(
-                            "🔔",
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
                           ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(left: 20),
-                          height: 25,
-                          width: 35,
-                          alignment: Alignment.topLeft,
-                          child: Text(
-                            "❤",
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
+                          Container(
+                            margin: EdgeInsets.only(left: 20),
+                            height: 25,
+                            width: 25,
+                            alignment: Alignment.topLeft,
+                            child: Text(
+                              "❤",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                     Container(
                       margin: EdgeInsets.all(20),
                       height: 40,
-                      width: 400,
+                      width: w * 0.950,
                       decoration: BoxDecoration(
                         color: Color(0xfff5f5f5),
                         borderRadius: BorderRadius.circular(10),
@@ -152,8 +158,8 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Container(
                           margin: EdgeInsets.only(top: 20, left: 20, right: 20),
-                          height: 150,
-                          width: 320,
+                          height: h * 0.190,
+                          width: w * 0.880,
                           decoration: BoxDecoration(
                             color: Color(0xfff5f5f5),
                             borderRadius: BorderRadius.circular(30),
@@ -181,7 +187,7 @@ class _HomePageState extends State<HomePage> {
                         "Most Popular",
                         style: TextStyle(
                           fontSize: 16,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w800,
                         ),
                       ),
                     ),
@@ -259,7 +265,7 @@ class _HomePageState extends State<HomePage> {
               bottom: 0,
               child: Container(
                 height: 70,
-                width: 360,
+                width: w * 1,
                 color: Colors.white,
                 child: Row(
                   children: [

@@ -5,6 +5,8 @@ import '../Screens/all_product_list.dart';
 
 Widget product({required String category}) {
   return Builder(builder: (context) {
+    double h = MediaQuery.of(context).size.height;
+    double w = MediaQuery.of(context).size.width;
     return SingleChildScrollView(
       child: Row(
         children: [
@@ -17,8 +19,8 @@ Widget product({required String category}) {
                     },
                     child: Container(
                       margin: EdgeInsets.only(top: 20, bottom: 20, left: 20),
-                      height: 300,
-                      width: 200,
+                      height: 350,
+                      width: 230,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                       ),

@@ -12,6 +12,8 @@ class Detail_Scereen extends StatefulWidget {
 class _Detail_ScereenState extends State<Detail_Scereen> {
   @override
   Widget build(BuildContext context) {
+    double h = MediaQuery.of(context).size.height;
+    double w = MediaQuery.of(context).size.width;
     Map<String, dynamic> data =
         ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
 
@@ -48,8 +50,8 @@ class _Detail_ScereenState extends State<Detail_Scereen> {
                         ...data['images']
                             .map(
                               (e) => Container(
-                                height: 350,
-                                width: 360,
+                                height: h * 0.490,
+                                width: w * 0.999,
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
                                     image: NetworkImage(e),
@@ -64,7 +66,7 @@ class _Detail_ScereenState extends State<Detail_Scereen> {
                   ),
                   Container(
                     padding: EdgeInsets.all(10),
-                    height: 374,
+                    height: h * 0.460,
                     width: 360,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -100,12 +102,15 @@ class _Detail_ScereenState extends State<Detail_Scereen> {
                         Container(
                           height: 70,
                           width: 350,
-                          child: Text(
-                            "${data['description']}",
-                            overflow: TextOverflow.clip,
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.grey,
+                          child: SingleChildScrollView(
+                            scrollDirection: Axis.vertical,
+                            child: Text(
+                              "${data['description']}",
+                              overflow: TextOverflow.clip,
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.grey,
+                              ),
                             ),
                           ),
                         ),

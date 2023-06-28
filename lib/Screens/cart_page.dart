@@ -82,7 +82,7 @@ class _Cart_PageState extends State<Cart_Page> {
                                             topLeft: Radius.circular(10),
                                             bottomLeft: Radius.circular(10),
                                           ),
-                                          color: Colors.white,
+                                          color: Colors.white70,
                                         ),
                                         child: Column(
                                           children: [
